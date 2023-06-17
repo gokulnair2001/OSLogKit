@@ -53,6 +53,39 @@ public class OSLogKit {
                 logger.log(level: level, "\(message)")
             }
         }
+    }
+    
+    @available(iOS 15.0, *)
+    /// Exports the log entries for a specific SubSystem with specific duration
+    /// - Parameters:
+    ///   - subsystem: Identifier string used while initialising the OSLogKit. If not used Bundle ID of the app is taken into consideration
+    ///   - days: Number of days for which the logs need to be exported
+    /// - Returns: Array of logs, String format - `[Date] [Category] message`
+    func exportLogs(forSubsystem subsystem: String = "", withinDays days: Int = 1) -> [String] {
         
+        var logEntries:[String] = []
+        var subSystemString = subsystem
+        
+        if subsystem.isEmpty {
+            guard let bundleId = Bundle.main.bundleIdentifier else { return logEntries }
+            subSystemString = bundleId
+        }
+        
+        do {
+            let store = try OSLogStore(scope: .currentProcessIdentifier)
+            let date = Date.now.addingTimeInterval(TimeInterval(-24 * 3600 * days))
+            let position = store.position(date: date)
+
+            logEntries = try store
+                .getEntries(at: position)
+                .compactMap { $0 as? OSLogEntryLog }
+                .filter { $0.subsystem == subSystemString }
+                .map { "[\($0.date.formatted())] [\($0.category)] \($0.composedMessage)" }
+            
+        } catch {
+            self.logger.warning("OSLogKit export error: \(error.localizedDescription, privacy: .public)")
+        }
+        
+        return logEntries
     }
 }
