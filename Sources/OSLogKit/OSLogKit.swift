@@ -61,7 +61,7 @@ public class OSLogKit {
     ///   - subsystem: Identifier string used while initialising the OSLogKit. If not used Bundle ID of the app is taken into consideration
     ///   - days: Number of days for which the logs need to be exported
     /// - Returns: Array of logs, String format - `[Date] [Category] message`
-    func exportLogs(forSubsystem subsystem: String = "", withinDays days: Int = 1) -> [String] {
+    public func exportLogs(forSubsystem subsystem: String = "", withinDays days: Int = 1) -> [String] {
         
         var logEntries:[String] = []
         var subSystemString = subsystem
