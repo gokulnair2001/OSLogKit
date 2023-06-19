@@ -9,8 +9,10 @@ import Foundation
 import SwiftUI
 import OSLog
 
-@available(macOS 11.0, *)
 @available(iOS 14.0, *)
+@available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 extension View {
     
     /// Captures logs on appearance of a view with specific log level

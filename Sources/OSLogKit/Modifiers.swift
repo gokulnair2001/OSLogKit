@@ -12,8 +12,10 @@ import OSLog
 
 // MARK: -  OnAppear Modifier
 
-@available(macOS 11.0, *)
 @available(iOS 14.0, *)
+@available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 /// OnAppearOSLog
 /// logger: A OSLogKit logger instance to capture events
 /// message: Message to capture in logger
@@ -33,8 +35,10 @@ struct OnAppearOSLog: ViewModifier {
     }
 }
 
-@available(macOS 11.0, *)
 @available(iOS 14.0, *)
+@available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 /// OnAppearBulkOSLog
 /// logger: A OSLogKit logger instance to capture events
 /// message: Messages to capture in logger
@@ -56,8 +60,10 @@ struct OnAppearBulkOSLog: ViewModifier {
 
 // MARK: - OnTapGesture Modifiers
 
-@available(macOS 11.0, *)
 @available(iOS 14.0, *)
+@available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 /// OnTapOSLog
 /// logger: A OSLogKit logger instance to capture events
 /// message: Message to capture in logger
@@ -77,8 +83,10 @@ struct OnTapOSLog: ViewModifier {
     }
 }
 
-@available(macOS 11.0, *)
 @available(iOS 14.0, *)
+@available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 /// OnTapBulkOSLog
 /// logger: A OSLogKit logger instance to capture events
 /// message: Messages to capture in logger
@@ -100,8 +108,10 @@ struct OnTapBulkOSLog: ViewModifier {
 
 // MARK: -  OnSubmit modifiers
 
-@available(macOS 11.0, *)
 @available(iOS 15.0, *)
+@available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 /// OnSubmitOSLog
 /// logger: A OSLogKit logger instance to capture events
 /// message: Message to capture in logger
@@ -121,8 +131,10 @@ struct OnSubmitOSLog: ViewModifier {
     }
 }
 
-@available(macOS 11.0, *)
 @available(iOS 15.0, *)
+@available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 /// OnSubmitBulkOSLog
 /// logger: A OSLogKit logger instance to capture events
 /// message: Messages to capture in logger
@@ -144,8 +156,10 @@ struct OnSubmitBulkOSLog: ViewModifier {
 
 // MARK: - OnDisappear modifier
 
-@available(macOS 11.0, *)
 @available(iOS 14.0, *)
+@available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 /// OnDisappearOSLog
 /// logger: A OSLogKit logger instance to capture events
 /// message: Message to capture in logger
@@ -165,8 +179,10 @@ struct OnDisappearOSLog: ViewModifier {
     }
 }
 
-@available(macOS 11.0, *)
 @available(iOS 14.0, *)
+@available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 /// OnDisappearBulkOSLog
 /// logger: A OSLogKit logger instance to capture events
 /// message: Messages to capture in logger
@@ -188,8 +204,10 @@ struct OnDisappearBulkOSLog: ViewModifier {
 
 // MARK: -  OnLongPressGesture Modifiers
 
-@available(macOS 11.0, *)
 @available(iOS 14.0, *)
+@available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 /// OnLongPressOSLog
 /// logger: A OSLogKit logger instance to capture events
 /// message: Message to capture in logger
@@ -209,8 +227,10 @@ struct OnLongPressOSLog: ViewModifier {
     }
 }
 
-@available(macOS 11.0, *)
 @available(iOS 14.0, *)
+@available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 /// OnLongPressBulkOSLog
 /// logger: A OSLogKit logger instance to capture events
 /// message: Messages to capture in logger
