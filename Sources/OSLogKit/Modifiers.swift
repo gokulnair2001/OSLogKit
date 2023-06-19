@@ -22,12 +22,14 @@ struct OnAppearOSLog: ViewModifier {
     var logger: OSLogKit
     var message: String
     var level: OSLogType? = nil
+    var action: (() -> Void)? = nil
     
     func body(content: Content) -> some View {
         content
-            .onAppear {
+            .onAppear(perform: {
+                action?()
                 logger.capture(level: level, message: message)
-            }
+            })
     }
 }
 
@@ -41,10 +43,12 @@ struct OnAppearBulkOSLog: ViewModifier {
     var logger: OSLogKit
     var messages: [String]
     var levels: [OSLogType] = []
+    var action: (() -> Void)? = nil
     
     func body(content: Content) -> some View {
         content
             .onAppear {
+                action?()
                 logger.captureInBulk(levels: levels, messages: messages)
             }
     }
@@ -62,10 +66,12 @@ struct OnTapOSLog: ViewModifier {
     var logger: OSLogKit
     var message: String
     var level: OSLogType? = nil
+    var action: (() -> Void)? = nil
     
     func body(content: Content) -> some View {
         content
             .onTapGesture {
+                action?()
                 logger.capture(level: level, message: message)
             }
     }
@@ -81,10 +87,12 @@ struct OnTapBulkOSLog: ViewModifier {
     var logger: OSLogKit
     var messages: [String]
     var levels: [OSLogType] = []
+    var action: (() -> Void)? = nil
     
     func body(content: Content) -> some View {
         content
             .onTapGesture {
+                action?()
                 logger.captureInBulk(levels: levels, messages: messages)
             }
     }
@@ -102,10 +110,12 @@ struct OnSubmitOSLog: ViewModifier {
     var logger: OSLogKit
     var message: String
     var level: OSLogType? = nil
+    var action: (() -> Void)? = nil
     
     func body(content: Content) -> some View {
         content
             .onSubmit {
+                action?()
                 logger.capture(level: level, message: message)
             }
     }
@@ -121,10 +131,12 @@ struct OnSubmitBulkOSLog: ViewModifier {
     var logger: OSLogKit
     var messages: [String]
     var levels: [OSLogType] = []
+    var action: (() -> Void)? = nil
     
     func body(content: Content) -> some View {
         content
             .onSubmit {
+                action?()
                 logger.captureInBulk(levels: levels, messages: messages)
             }
     }
@@ -142,10 +154,12 @@ struct OnDisappearOSLog: ViewModifier {
     var logger: OSLogKit
     var message: String
     var level: OSLogType? = nil
+    var action: (() -> Void)? = nil
     
     func body(content: Content) -> some View {
         content
             .onDisappear {
+                action?()
                 logger.capture(level: level, message: message)
             }
     }
@@ -161,10 +175,12 @@ struct OnDisappearBulkOSLog: ViewModifier {
     var logger: OSLogKit
     var messages: [String]
     var levels: [OSLogType] = []
+    var action: (() -> Void)? = nil
     
     func body(content: Content) -> some View {
         content
             .onDisappear {
+                action?()
                 logger.captureInBulk(levels: levels, messages: messages)
             }
     }
@@ -182,10 +198,12 @@ struct OnLongPressOSLog: ViewModifier {
     var logger: OSLogKit
     var message: String
     var level: OSLogType? = nil
+    var action: (() -> Void)? = nil
     
     func body(content: Content) -> some View {
         content
             .onLongPressGesture {
+                action?()
                 logger.capture(level: level, message: message)
             }
     }
@@ -201,10 +219,12 @@ struct OnLongPressBulkOSLog: ViewModifier {
     var logger: OSLogKit
     var messages: [String]
     var levels: [OSLogType] = []
+    var action: (() -> Void)? = nil
     
     func body(content: Content) -> some View {
         content
             .onLongPressGesture {
+                action?()
                 logger.captureInBulk(levels: levels, messages: messages)
             }
     }
