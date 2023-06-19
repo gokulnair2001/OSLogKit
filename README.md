@@ -38,6 +38,11 @@ Following are the methods which OSLogKit supports
  ```
  
  💽 Log Exporting
+ * This method exports the log entries for a specific SubSystem within the specified time span
+ * Use the same ```subsystem``` using which the logs are made
+ * ```timeSpan``` denotes the span for which logs needs to be exported
+ * ```completion``` Block returns array of logs captured if the process succeeds and on failure OSLogKit provides the error. 
+ * Exported Log format - `[[Date] [Category] message]`
  ```swift
  func exportLogs(forSubsystem subsystem: String = "", timeSpan span: OSLogSpan = .day(1), completion: @escaping((Result<[String], OSLogError>) -> ()))
  ```
