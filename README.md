@@ -105,6 +105,19 @@ Following are the methods which OSLogKit supports
  
  * Parameters for the above modifiers are same as ```CaptureLogOnAppear``` & ```captureBulkLogOnAppear```
 
+## In Code Usage
+### SwiftUI
+```swift
+ VStack {
+ // Some view
+ }.captureLogOnTap(logger, "OSLogKit test log") {
+  // additional on tap action (Optional)
+ }
+```
+### UIKit
+```swift
+```
+
 ## ⚖️ License
 * OSLogKit is available under MIT [License](https://github.com/gokulnair2001/OSLogKit/blob/main/LICENSE).
  
