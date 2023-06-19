@@ -116,7 +116,9 @@ Following are the methods which OSLogKit supports
 ```
 ### UIKit
 ```swift
+logger.capture(message: "OSLogKit test log")
 ```
+* The following are the most basic usage, various other parameters are availabel which can be used as per need
 
 ## ⚖️ License
 * OSLogKit is available under MIT [License](https://github.com/gokulnair2001/OSLogKit/blob/main/LICENSE).
