@@ -22,8 +22,5 @@ let package = Package(
         .target(
             name: "OSLogKit",
             dependencies: []),
-        .testTarget(
-            name: "OSLogKitTests",
-            dependencies: ["OSLogKit"]),
     ]
 )
