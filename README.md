@@ -104,4 +104,7 @@ Following are the methods which OSLogKit supports
  | .captureBulkLogOnSubmit | Captures bulk log on submit |
  
  * Parameters for the above modifiers are same as ```CaptureLogOnAppear``` & ```captureBulkLogOnAppear```
+
+## ⚖️ License
+* OSLogKit is available under MIT [License](https://github.com/gokulnair2001/OSLogKit/blob/main/LICENSE).
  
