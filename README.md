@@ -21,3 +21,23 @@ let logger = Logger()
 ```swift
 let logger = Logger(subSystem: "com.gokulnair.Test-OSKit", category: "ContentView")
 ```
+## 🛠 Operations
+Following are the methods which OSLogKit supports
+
+💽 Single Capture/Logging
+* Captures a single log with specified OSLogLevel and message
+* By default the capture level is ```.default```
+```swift
+ func capture(level: OSLogType? = nil, message: String)
+```
+
+💽 Bulk Capturing/Logging
+* Captures logs in bulk with the specified OSLogLevels and messages
+ ```swift
+ func captureInBulk(levels: [OSLogType] = [], messages: [String])
+ ```
+ 
+ 💽 Log Exporting
+ ```swift
+ func exportLogs(forSubsystem subsystem: String = "", timeSpan span: OSLogSpan = .day(1), completion: @escaping((Result<[String], OSLogError>) -> ()))
+ ```
