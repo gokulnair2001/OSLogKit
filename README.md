@@ -1,6 +1,10 @@
 # OSLogKit
 
-OSLogKit is a layer 2 framework developed on top of the native OSLog system, aiming to simplify the integration of OSLog into your project. Apple has done an excellent job in ensuring that OSLogging is straightforward and easy to use. However, when it comes to implementing OSLog in your codebase, it can be challenging. To address this, OSLogKit has been developed, further simplifying the process of adopting OSLog. One notable advantage of OSLogKit is that it offers additional functionalities that are not available in the native API.
+OSLogKit is a layer 2 framework developed on top of the native OSLog system, aiming to simplify the integration of OSLog into your project. Apple has done an excellent job in ensuring that OSLogging is straightforward and easy to use. However, when it comes to implementing OSLog in your codebase, it can be challenging. 
+
+To address this, OSLogKit has been developed, further simplifying the process of adopting OSLog. One notable advantage of OSLogKit is that it offers additional functionalities that are not available in the native API.
+
+OSLogKit have a variety of Modifiers which makes OSLogKit adoption very easy. Dont worry if your code base is in UIKit, you can still adopt it easily.
 
 ## 📔 Usage 
 
@@ -46,3 +50,77 @@ Following are the methods which OSLogKit supports
  ```swift
  func exportLogs(forSubsystem subsystem: String = "", timeSpan span: OSLogSpan = .day(1), completion: @escaping((Result<[String], OSLogError>) -> ()))
  ```
+ 
+ ### OSLogSpan
+ * OSLogSpan is the duration for which any log is exported
+ Following are the OSLogSpans
+ 
+ | Name | Cases | Description |
+ | -- | -- | -- |
+ | minutes | .minute(x) | Considers x minutes in past |
+ | hours | .hour(x) | Considers x hours in past |
+ | days | .day(x) | Considers x days in past |
+ 
+ ### OSLogError
+ * The default error type returned in OSLogKit for any form of failure is OSLogError
+ * Use ```errorDescription``` in the failure case in order to get the error description
+ * [Demo App Link]()
+ 
+ | Name | Cases | Description |
+ | -- | -- | -- |
+ | Export Failure | .exportFailure(let customString) | Custom export failure error |
+ | Invalid Subsystem | .invalidSubsystem | Occours when an Invalid Subsystem is used |
+ 
+ ## SwiftUI Modifiers
+ 
+ ### 🧩 CaptureLogOnAppear
+ * ```logger``` log instance for which logs needs to be captured
+ * ```message``` string which needs to be logged
+ * ```level``` specific level on which log needs to be captured
+ * ```perform``` since this modifier is made on top of OnAppear inorder to perform additional actions in OnApper you can use this param
+ ```swift
+ func captureLogOnAppear(_ logger: OSLogKit, _ message: String, _ level: OSLogType = .default, _ perform: (() -> Void)? = nil)
+ ```
+ 
+ ### 🧩 captureBulkLogOnAppear
+ * ```logger``` log instance for which logs needs to be captured
+ * ```message``` strings which needs to be logged
+ * ```level``` specific levels on which logs needs to be captured
+ * ```perform``` since this modifier is made on top of OnAppear inorder to perform additional actions in OnApper you can use this param
+ ```swift
+ func captureBulkLogOnAppear(_ logger: OSLogKit, _ messages: [String], _ levels: [OSLogType], _ perform: (() -> Void)? = nil)
+ ```
+ 
+ ### 🧩 captureLogOnDisappear
+ ```swift
+ func captureLogOnDisappear(_ logger: OSLogKit, _ message: String, _ level: OSLogType = .default, _ perform: (() -> Void)? = nil)
+ ```
+ ### 🧩 captureBulkLogOnDisappear
+ ```swift
+ func captureBulkLogOnDisappear(_ logger: OSLogKit, _ messages: [String], _ levels: [OSLogType], _ perform: (() -> Void)? = nil)
+ ```
+ ### 🧩 captureLogOnLongPress
+ ```swift
+ func captureLogOnLongPress(_ logger: OSLogKit, _ message: String, _ level: OSLogType = .default, _ perform: (() -> Void)? = nil)
+ ```
+ ### 🧩 captureBulkLogOnLongPress
+ ```swift
+ func captureBulkLogOnLongPress(_ logger: OSLogKit, _ messages: [String], _ levels: [OSLogType], _ perform: (() -> Void)? = nil)
+ ```
+ ### 🧩 captureLogOnTap
+ ```swift
+ func captureLogOnTap(_ logger: OSLogKit, _ message: String, _ level: OSLogType = .default, _ perform: (() -> Void)? = nil)
+ ```
+ ### 🧩 captureBulkLogOnTap
+ ```swift
+ func captureBulkLogOnTap(_ logger: OSLogKit, _ messages: [String], _ levels: [OSLogType], _ perform: (() -> Void)? = nil)
+ ```
+ ### 🧩 captureLogOnSubmit
+ ```swift
+ func captureLogOnSubmit(_ logger: OSLogKit, _ message: String, _ level: OSLogType = .default, _ perform: (() -> Void)? = nil)
+ ```
+ ### 🧩 captureBulkLogOnSubmit
+ ```swift
+ func captureBulkLogOnSubmit(_ logger: OSLogKit, _ messages: [String], _ levels: [OSLogType], _ perform: (() -> Void)? = nil)
+ ```
+ 
