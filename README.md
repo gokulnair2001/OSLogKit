@@ -66,7 +66,7 @@ Following are the methods which OSLogKit supports
  * Use ```errorDescription``` in the failure case in order to get the error description
  * [Demo App Link]()
  
- | Name | Cases | Description |
+ | Cases | Description |
  | -- | -- | -- |
  | Export Failure | .exportFailure(let customString) | Custom export failure error |
  | Invalid Subsystem | .invalidSubsystem | Occours when an Invalid Subsystem is used |
@@ -90,37 +90,18 @@ Following are the methods which OSLogKit supports
  ```swift
  func captureBulkLogOnAppear(_ logger: OSLogKit, _ messages: [String], _ levels: [OSLogType], _ perform: (() -> Void)? = nil)
  ```
+ Other modifiers are
  
- ### 🧩 captureLogOnDisappear
- ```swift
- func captureLogOnDisappear(_ logger: OSLogKit, _ message: String, _ level: OSLogType = .default, _ perform: (() -> Void)? = nil)
- ```
- ### 🧩 captureBulkLogOnDisappear
- ```swift
- func captureBulkLogOnDisappear(_ logger: OSLogKit, _ messages: [String], _ levels: [OSLogType], _ perform: (() -> Void)? = nil)
- ```
- ### 🧩 captureLogOnLongPress
- ```swift
- func captureLogOnLongPress(_ logger: OSLogKit, _ message: String, _ level: OSLogType = .default, _ perform: (() -> Void)? = nil)
- ```
- ### 🧩 captureBulkLogOnLongPress
- ```swift
- func captureBulkLogOnLongPress(_ logger: OSLogKit, _ messages: [String], _ levels: [OSLogType], _ perform: (() -> Void)? = nil)
- ```
- ### 🧩 captureLogOnTap
- ```swift
- func captureLogOnTap(_ logger: OSLogKit, _ message: String, _ level: OSLogType = .default, _ perform: (() -> Void)? = nil)
- ```
- ### 🧩 captureBulkLogOnTap
- ```swift
- func captureBulkLogOnTap(_ logger: OSLogKit, _ messages: [String], _ levels: [OSLogType], _ perform: (() -> Void)? = nil)
- ```
- ### 🧩 captureLogOnSubmit
- ```swift
- func captureLogOnSubmit(_ logger: OSLogKit, _ message: String, _ level: OSLogType = .default, _ perform: (() -> Void)? = nil)
- ```
- ### 🧩 captureBulkLogOnSubmit
- ```swift
- func captureBulkLogOnSubmit(_ logger: OSLogKit, _ messages: [String], _ levels: [OSLogType], _ perform: (() -> Void)? = nil)
- ```
+ | Case | Description |
+ | -- | -- |
+ | .captureLogOnDisappear | Captures log on disappear |
+ | .captureBulkLogOnDisappear | Captures bulk log on disappear |
+ | .captureLogOnLongPress | Captures log on long press |
+ | .captureBulkLogOnLongPress | Captures bulk log on long press |
+ | .captureLogOnTap | Captures log on tap |
+ | .captureBulkLogOnTap | Captures bulk log on tap |
+ | .captureLogOnSubmit | Captures log on submit |
+ | .captureBulkLogOnSubmit | Captures bulk log on submit |
+ 
+ * Parameters for the above modifiers are same as ```CaptureLogOnAppear``` & ```captureBulkLogOnAppear```
  
