@@ -6,6 +6,8 @@ To address this, OSLogKit has been developed, further simplifying the process of
 
 OSLogKit have a variety of Modifiers which makes OSLogKit adoption very easy. Dont worry if your code base is in UIKit, you can still adopt it easily.
 
+![iOS 14+](https://img.shields.io/badge/Adobe%20Fonts-000B1D.svg?style=for-the-badge&logo=Adobe%20Fonts&logoColor=white) ![macOS 11+](https://img.shields.io/badge/Adobe%20Fonts-000B1D.svg?style=for-the-badge&logo=Adobe%20Fonts&logoColor=white) ![tvOS 14+](https://img.shields.io/badge/Adobe%20Fonts-000B1D.svg?style=for-the-badge&logo=Adobe%20Fonts&logoColor=white) ![watchOS 14+](https://img.shields.io/badge/Adobe%20Fonts-000B1D.svg?style=for-the-badge&logo=Adobe%20Fonts&logoColor=white)
+
 ## 📔 Usage 
 
 ### ⚙️ Initialisation
@@ -67,7 +69,7 @@ Following are the methods which OSLogKit supports
  * [Demo App Link]()
  
  | Cases | Description |
- | -- | -- | -- |
+ | -- | -- |
  | Export Failure | .exportFailure(let customString) | Custom export failure error |
  | Invalid Subsystem | .invalidSubsystem | Occours when an Invalid Subsystem is used |
  
@@ -82,7 +84,7 @@ Following are the methods which OSLogKit supports
  func captureLogOnAppear(_ logger: OSLogKit, _ message: String, _ level: OSLogType = .default, _ perform: (() -> Void)? = nil)
  ```
  
- ### 🧩 captureBulkLogOnAppear
+ ### 🧩 CaptureBulkLogOnAppear
  * ```logger``` log instance for which logs needs to be captured
  * ```message``` strings which needs to be logged
  * ```level``` specific levels on which logs needs to be captured
@@ -106,10 +108,7 @@ Following are the methods which OSLogKit supports
  * Parameters for the above modifiers are same as ```CaptureLogOnAppear``` & ```captureBulkLogOnAppear```
 
 ## In Code Usage
-* Creating logger instance
-```swift
-let logger = Logger()
-```
+
 ### SwiftUI
 ```swift
  VStack {
