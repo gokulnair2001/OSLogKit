@@ -106,6 +106,10 @@ Following are the methods which OSLogKit supports
  * Parameters for the above modifiers are same as ```CaptureLogOnAppear``` & ```captureBulkLogOnAppear```
 
 ## In Code Usage
+* Creating logger instance
+```swift
+let logger = Logger()
+```
 ### SwiftUI
 ```swift
  VStack {
