@@ -6,6 +6,8 @@ To address this, OSLogKit has been developed, further simplifying the process of
 
 OSLogKit have a variety of Modifiers which makes OSLogKit adoption very easy. Dont worry if your code base is in UIKit, you can still adopt it easily.
 
+[Demo App](https://github.com/gokulnair2001/OSLogKit_DemoApp)
+
 [![Generic badge](https://img.shields.io/badge/iOS-14+-black.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/macOS-11+-black.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/tvOS-14+-black.svg)](https://shields.io/)
@@ -69,7 +71,7 @@ Following are the methods which OSLogKit supports
  ### OSLogError
  * The default error type returned in OSLogKit for any form of failure is OSLogError
  * Use ```errorDescription``` in the failure case in order to get the error description
- * [Demo App Link]()
+ * [Demo App](https://github.com/gokulnair2001/OSLogKit_DemoApp)
  
  | Cases | Description |
  | -- | -- |
