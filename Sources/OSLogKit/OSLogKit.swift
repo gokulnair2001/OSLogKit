@@ -4,6 +4,8 @@ import SwiftUI
 
 @available(iOS 14.0, *)
 @available(macOS 11.0, *)
+@available(tvOS 14.0, *)
+@available(watchOS 7.0, *)
 public class OSLogKit {
     
     // Classic Logger instance which sources all loggings
@@ -55,37 +57,41 @@ public class OSLogKit {
         }
     }
     
-    @available(iOS 15.0, *)
-    /// Exports the log entries for a specific SubSystem with specific duration
+    /// Exports the log entries for a specific SubSystem within the specified time span
     /// - Parameters:
     ///   - subsystem: Identifier string used while initialising the OSLogKit. If not used Bundle ID of the app is taken into consideration
-    ///   - days: Number of days for which the logs need to be exported
-    /// - Returns: Array of logs, String format - `[Date] [Category] message`
-    public func exportLogs(forSubsystem subsystem: String = "", withinDays days: Int = 1) -> [String] {
+    ///   - span: Duration for which the log needs to be fetched. Logs are available for limited period of time, select span accordingly
+    ///   - completion: Block returns array of logs captured if the process succeeds and on failure OSLogKit provides the error.
+    ///     Exported Log format - `[[Date] [Category] message]`
+    @available(iOS 15.0, *)
+    public func exportLogs(forSubsystem subsystem: String = "", timeSpan span: OSLogSpan = .day(1), completion: @escaping((Result<[String], OSLogError>) -> ())) {
         
-        var logEntries:[String] = []
+        var logEntries: [String] = []
         var subSystemString = subsystem
         
         if subsystem.isEmpty {
-            guard let bundleId = Bundle.main.bundleIdentifier else { return logEntries }
+            guard let bundleId = Bundle.main.bundleIdentifier else {
+                completion(.failure(.invalidSubsystem))
+                return
+            }
             subSystemString = bundleId
         }
         
         do {
             let store = try OSLogStore(scope: .currentProcessIdentifier)
-            let date = Date.now.addingTimeInterval(TimeInterval(-24 * 3600 * days))
+            let date = Date.now.addingTimeInterval(span.getTimeInterval)
             let position = store.position(date: date)
-
+            
             logEntries = try store
                 .getEntries(at: position)
                 .compactMap { $0 as? OSLogEntryLog }
                 .filter { $0.subsystem == subSystemString }
                 .map { "[\($0.date.formatted())] [\($0.category)] \($0.composedMessage)" }
+            completion(.success(logEntries))
             
         } catch {
+            completion(.failure(.exportFailure("OSLogKit export error: \(error.localizedDescription)")))
             self.logger.warning("OSLogKit export error: \(error.localizedDescription, privacy: .public)")
         }
-        
-        return logEntries
     }
 }
