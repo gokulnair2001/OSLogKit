@@ -133,8 +133,10 @@ logger.capture(message: "OSLogKit test log")
 * Thus create instance of OSLogKit and directly access the classic logger. 
 
 ## 📦 SPM 
-OSLogKit is available through [Swift Package Manager](https://github.com/apple/swift-package-manager/). To add OSLogKit through SPM
-* Open project in Xcode
+OSLogKit is available through [Swift Package Manager](https://github.com/apple/swift-package-manager/)
+
+To add OSLogKit through SPM:
+* Open your project in Xcode
 * **Select ```File > Add Packages```**
 
 ```
