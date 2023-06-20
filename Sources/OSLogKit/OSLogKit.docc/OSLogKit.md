@@ -18,7 +18,7 @@ OSLogKit has a variety of Modifiers which makes OSLogKit adoption very easy. Don
 
 - ``OSLogKit``
 
-### Types
+### Enumerations
 
 - ``OSLogError``
 - ``OSLogSpan``
