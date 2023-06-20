@@ -26,7 +26,7 @@ let logger = Logger()
 ```
 
 ### 🗳 Advance Initialisation
-* This initialization provides the leverage to select your won Subsystem and Category
+* This initialization provides the leverage to select your own Subsystem and Category
 * When Subsytem is left empty then the Bundle ID of the app is taken into consideration
 
 ```swift
@@ -91,7 +91,7 @@ Following are the methods which OSLogKit supports
  
  ### 🧩 CaptureBulkLogOnAppear
  * ```logger``` log instance for which logs need to be captured
- * ```message``` strings that needs to be logged
+ * ```message``` strings that need to be logged
  * ```level``` specific levels on which logs need to be captured
  * ```perform```Since this modifier is made on top of OnAppear in order to perform additional actions in OnApper you can use this param
  ```swift
@@ -112,7 +112,7 @@ Following are the methods which OSLogKit supports
  
  * Parameters for the above modifiers are same as ```CaptureLogOnAppear``` & ```captureBulkLogOnAppear```
 
-## In Code Usage
+## ⌨️ In Code Usage
 
 ### SwiftUI
 ```swift
