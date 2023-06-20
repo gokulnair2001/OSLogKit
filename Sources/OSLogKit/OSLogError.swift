@@ -12,6 +12,7 @@ public enum OSLogError: Error {
     case invalidSubsystem
     case exportFailure(String)
     
+    // Detailed description about the error
     public var errorDescription: String {
         switch self {
         case .exportFailure(let customString):
