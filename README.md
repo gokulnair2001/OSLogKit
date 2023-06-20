@@ -133,7 +133,7 @@ logger.capture(message: "OSLogKit test log")
 
 ## ⚠️ Caution
 * OSLogKit only supports messages of String type, thus in order to log messages with various privacy levels you still need to use the classic logger. This is because Apple doesn't provide the option to create an instance of OSLogMessage.
-* Thus create an instance of OSLogKit and directly access the classic logger. 
+* Thus create an instance of OSLogKit and directly access the classic logger.
 
 ## 📦 SPM 
 OSLogKit is available through [Swift Package Manager](https://github.com/apple/swift-package-manager/). To add OSLogKit through SPM
@@ -144,6 +144,9 @@ OSLogKit is available through [Swift Package Manager](https://github.com/apple/s
 https://github.com/gokulnair2001/OSLogKit
 ```
 <img width="1089" alt="SPM Dialogue" src="">
+
+## ✨ Upcoming Features
+* I am currently working on this version, aiming to delve deeper and offer a bunch of additional features. Keep an eye on my [Twitter](https://twitter.com/itIsGokulNair) handle for further updates.
 
 ## ⚖️ License
 * OSLogKit is available under MIT [License](https://github.com/gokulnair2001/OSLogKit/blob/main/LICENSE).
