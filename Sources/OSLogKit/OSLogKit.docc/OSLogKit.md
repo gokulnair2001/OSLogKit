@@ -14,7 +14,7 @@ OSLogKit has a variety of Modifiers which makes OSLogKit adoption very easy. Don
 
 ## Topics
 
-### Essentials
+### Classes
 
 - ``OSLogKit``
 
