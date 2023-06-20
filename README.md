@@ -145,7 +145,7 @@ OSLogKit is available through [Swift Package Manager](https://github.com/apple/s
 ```
 https://github.com/gokulnair2001/OSLogKit
 ```
-<img width="1089" alt="SPM Dialogue" src="">
+<img src="https://github.com/gokulnair2001/OSLogKit/assets/56252259/05f1688b-b62a-4114-a239-aa2f691f2e52" width=80% height=40%>
 
 ## ✨ Upcoming Features
 * I am currently working on this version, aiming to delve deeper and offer a bunch of additional features. Keep an eye on my [Twitter](https://twitter.com/itIsGokulNair) handle for further updates.
