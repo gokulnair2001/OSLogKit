@@ -1,3 +1,6 @@
+
+<img src="https://github.com/gokulnair2001/OSLogKit/assets/56252259/55aef060-6273-4f48-8bed-f46ad6db8681" width=20% height=20%>
+
 # OSLogKit
 
 OSLogKit is a layer 2 framework developed on top of the native OSLog system, aiming to simplify the integration of OSLog into your project. Apple has done an excellent job in ensuring that OSLogging is straightforward and easy to use. However, when it comes to implementing OSLog in your codebase, can be challenging. 
