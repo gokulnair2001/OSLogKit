@@ -1,3 +1,8 @@
+
+<!-- <img src="https://github.com/gokulnair2001/OSLogKit/assets/56252259/55aef060-6273-4f48-8bed-f46ad6db8681" width=20% height=20%> -->
+
+<img src="https://github.com/gokulnair2001/OSLogKit/assets/56252259/53164f76-9f0e-4dbf-8298-814424a427a0" width=20% height=20%>
+
 # OSLogKit
 
 OSLogKit is a layer 2 framework developed on top of the native OSLog system, aiming to simplify the integration of OSLog into your project. Apple has done an excellent job in ensuring that OSLogging is straightforward and easy to use. However, when it comes to implementing OSLog in your codebase, can be challenging. 
@@ -130,7 +135,7 @@ logger.capture(message: "OSLogKit test log")
 
 ## ⚠️ Caution
 * OSLogKit only supports messages of String type, thus in order to log messages with various privacy levels you still need to use the classic logger. This is because Apple doesn't provide the option to create an instance of OSLogMessage.
-* Thus create an instance of OSLogKit and directly access the classic logger. 
+* Thus create an instance of OSLogKit and directly access the classic logger.
 
 ## 📦 SPM 
 OSLogKit is available through [Swift Package Manager](https://github.com/apple/swift-package-manager/). To add OSLogKit through SPM
@@ -140,7 +145,10 @@ OSLogKit is available through [Swift Package Manager](https://github.com/apple/s
 ```
 https://github.com/gokulnair2001/OSLogKit
 ```
-<img width="1089" alt="SPM Dialogue" src="">
+<img src="https://github.com/gokulnair2001/OSLogKit/assets/56252259/05f1688b-b62a-4114-a239-aa2f691f2e52" width=80% height=40%>
+
+## ✨ Upcoming Features
+* I am currently working on this version, aiming to delve deeper and offer a bunch of additional features. Keep an eye on my [Twitter](https://twitter.com/itIsGokulNair) handle for further updates.
 
 ## ⚖️ License
 * OSLogKit is available under MIT [License](https://github.com/gokulnair2001/OSLogKit/blob/main/LICENSE).
