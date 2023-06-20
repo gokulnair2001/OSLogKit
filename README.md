@@ -73,10 +73,10 @@ Following are the methods which OSLogKit supports
  * Use ```errorDescription``` in the failure case in order to get the error description
  * [Demo App](https://github.com/gokulnair2001/OSLogKit_DemoApp)
  
- | Cases | Description |
- | -- | -- |
+ | Name | Case | Description |
+ | -- | -- | -- |
  | Export Failure | .exportFailure(let customString) | Custom export failure error |
- | Invalid Subsystem | .invalidSubsystem | Occours when an Invalid Subsystem is used |
+ | Invalid Subsystem | .invalidSubsystem | Occurs when an Invalid Subsystem is used |
  
  ## SwiftUI Modifiers
  
