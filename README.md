@@ -1,6 +1,7 @@
 
 <!-- <img src="https://github.com/gokulnair2001/OSLogKit/assets/56252259/55aef060-6273-4f48-8bed-f46ad6db8681" width=20% height=20%> -->
-<img src="https://github.com/gokulnair2001/OSLogKit/assets/56252259/50c7349d-e254-406f-b58f-4c7391ffe2b1" width=20% height=20%>
+
+<img src="https://github.com/gokulnair2001/OSLogKit/assets/56252259/53164f76-9f0e-4dbf-8298-814424a427a0" width=20% height=20%>
 
 # OSLogKit
 
