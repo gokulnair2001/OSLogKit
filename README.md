@@ -89,7 +89,7 @@ Following are the methods which OSLogKit supports
  * ```logger``` log instance for which logs need to be captured
  * ```message``` string which needs to be logged
  * ```level``` specific level on which log needs to be captured
- * ```perform```Since this modifier is made on top of OnAppear in order to perform additional actions in OnApper you can use this param
+ * ```perform```Since this modifier is made on top of OnAppear in order to perform additional actions in OnAppear you can use this param
  ```swift
  func captureLogOnAppear(_ logger: OSLogKit, _ message: String, _ level: OSLogType = .default, _ perform: (() -> Void)? = nil)
  ```
@@ -98,7 +98,7 @@ Following are the methods which OSLogKit supports
  * ```logger``` log instance for which logs need to be captured
  * ```message``` strings that need to be logged
  * ```level``` specific levels on which logs need to be captured
- * ```perform```Since this modifier is made on top of OnAppear in order to perform additional actions in OnApper you can use this param
+ * ```perform```Since this modifier is made on top of OnAppear in order to perform additional actions in OnAppear you can use this param
  ```swift
  func captureBulkLogOnAppear(_ logger: OSLogKit, _ messages: [String], _ levels: [OSLogType], _ perform: (() -> Void)? = nil)
  ```
