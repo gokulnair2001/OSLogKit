@@ -10,13 +10,16 @@ To address this, OSLogKit has been developed, further simplifying the process of
 
 OSLogKit has a variety of Modifiers which makes OSLogKit adoption very easy. Don't worry if your code base is in UIKit, you can still adopt it quickly.
 
-![OSLogKit](OSLogKit@2x.png)
+![OSLogKit](Banner.png)
 
 ## Topics
 
 ### Classes
 
-- ``OSLogKit``
+- ``OSLogKit/OSLogKit``
+
+### Usage
+- <doc:GettingStarted>
 
 ### Enumerations
 
