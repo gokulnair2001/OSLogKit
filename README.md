@@ -11,10 +11,18 @@ To address this, OSLogKit has been developed, further simplifying the process of
 
 OSLogKit has a variety of Modifiers which makes OSLogKit adoption very easy. Don't worry if your code base is in UIKit, you can still adopt it quickly.
 
-[![Generic badge](https://img.shields.io/badge/iOS-14+-black.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/macOS-11+-black.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/tvOS-14+-black.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/watchOS-7+-black.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/iOS-14.0+-black.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/macOS-11.0+-black.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/tvOS-14.0+-black.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/watchOS-7.0+-black.svg)](https://shields.io/)
+
+### 🤩 Beta Support
+* OSLogKit even supports visionOS
+* Since VisionOS is in Beta stage, all the updates of OSLogKit specifically for VisionOS will be available on the ```Support_VisionOS``` branch
+* While adding OSLogKit as package select [Support_VisionOS](https://github.com/gokulnair2001/OSLogKit/tree/Support_VisionOS) branch for VisionOS support
+
+[![Generic badge](https://img.shields.io/badge/visionOS-1.0+-black.svg)](https://shields.io/)
+
 
 [Demo App](https://github.com/gokulnair2001/OSLogKit_DemoApp)
 
