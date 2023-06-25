@@ -17,7 +17,7 @@ OSLogKit has a variety of Modifiers which makes OSLogKit adoption very easy. Don
 [![Generic badge](https://img.shields.io/badge/watchOS-7+-black.svg)](https://shields.io/)
 
 ### 🤩 Beta Support
-* OSLogKit even supports visionOS
+* OSLogKit now supports visionOS
 * Since VisionOS is in Beta stage, all the updates of OSLogKit specifically for VisionOS will be available on the ```Support_VisionOS``` branch
 * While adding OSLogKit as package select [Support_VisionOS](https://github.com/gokulnair2001/OSLogKit/tree/Support_VisionOS) branch for VisionOS support
 
