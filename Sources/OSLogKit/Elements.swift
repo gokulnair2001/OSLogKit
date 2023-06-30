@@ -11,6 +11,7 @@ import OSLog
 
 @available(iOS 14.0, *)
 @available(macOS 11.0, *)
+@available(xrOS 1.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
 extension View {

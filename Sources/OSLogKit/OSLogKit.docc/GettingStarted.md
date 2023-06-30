@@ -19,7 +19,6 @@ VStack {
  // additional on tap action (Optional)
 }
 ```
-- <doc:Modifiers>
 
 ### UIKit
 ```swift

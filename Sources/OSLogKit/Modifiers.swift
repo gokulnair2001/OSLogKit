@@ -14,6 +14,7 @@ import OSLog
 
 @available(iOS 14.0, *)
 @available(macOS 11.0, *)
+@available(xrOS 1.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
 /// OnAppearOSLog
@@ -37,6 +38,7 @@ struct OnAppearOSLog: ViewModifier {
 
 @available(iOS 14.0, *)
 @available(macOS 11.0, *)
+@available(xrOS 1.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
 /// OnAppearBulkOSLog
@@ -62,6 +64,7 @@ struct OnAppearBulkOSLog: ViewModifier {
 
 @available(iOS 14.0, *)
 @available(macOS 11.0, *)
+@available(xrOS 1.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
 /// OnTapOSLog
@@ -85,6 +88,7 @@ struct OnTapOSLog: ViewModifier {
 
 @available(iOS 14.0, *)
 @available(macOS 11.0, *)
+@available(xrOS 1.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
 /// OnTapBulkOSLog
@@ -110,6 +114,7 @@ struct OnTapBulkOSLog: ViewModifier {
 
 @available(iOS 15.0, *)
 @available(macOS 11.0, *)
+@available(xrOS 1.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
 /// OnSubmitOSLog
@@ -133,6 +138,7 @@ struct OnSubmitOSLog: ViewModifier {
 
 @available(iOS 15.0, *)
 @available(macOS 11.0, *)
+@available(xrOS 1.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
 /// OnSubmitBulkOSLog
@@ -158,6 +164,7 @@ struct OnSubmitBulkOSLog: ViewModifier {
 
 @available(iOS 14.0, *)
 @available(macOS 11.0, *)
+@available(xrOS 1.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
 /// OnDisappearOSLog
@@ -181,6 +188,7 @@ struct OnDisappearOSLog: ViewModifier {
 
 @available(iOS 14.0, *)
 @available(macOS 11.0, *)
+@available(xrOS 1.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
 /// OnDisappearBulkOSLog
@@ -206,6 +214,7 @@ struct OnDisappearBulkOSLog: ViewModifier {
 
 @available(iOS 14.0, *)
 @available(macOS 11.0, *)
+@available(xrOS 1.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
 /// OnLongPressOSLog
@@ -229,6 +238,7 @@ struct OnLongPressOSLog: ViewModifier {
 
 @available(iOS 14.0, *)
 @available(macOS 11.0, *)
+@available(xrOS 1.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
 /// OnLongPressBulkOSLog
